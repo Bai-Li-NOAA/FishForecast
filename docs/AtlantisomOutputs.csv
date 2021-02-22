@@ -1,9 +1,0 @@
-,"rep(""Outputs"", times = nrow(path_table))",V1,pathString,description,details
-1,Outputs,outputscatchage_census.rds,Outputs/outputscatchage_census.rds,Catch at age per species per time,
-2,Outputs,outputscatchlengthwt_census.rds,Outputs/outputscatchlengthwt_census.rds,"Len and wt at age, num at length",
-3,Outputs,outputscatchN_census.rds,Outputs/outputscatchN_census.rds,Catch number per species per time,
-4,Outputs,outputslengthwt_census.rds,Outputs/outputslengthwt_census.rds,"Len and wt at age, num at length ",
-5,Outputs,outputsnatage_census.rds,Outputs/outputsnatage_census.rds,Survey num at age per species per time,
-6,Outputs,outputsrun_truth.RData,Outputs/outputsrun_truth.RData,Atlantis true outputs (biomass etc),"biomass, abundance, landing, discard, age structure data, reserve and structural nitrogen, and biological parameters "
-7,Outputs,outputssurveyBcensus.rds,Outputs/outputssurveyBcensus.rds,Survey biomass per species per time,
-8,Outputs,outputssurveyNcensus.rds,Outputs/outputssurveyNcensus.rds,Survey abundance per species per time,
