@@ -1,0 +1,15 @@
+,"rep(""Inputs"", times = nrow(path_table))",V1,pathString,description
+1,Inputs,Biology.prm,Inputs/Biology.prm,"Set up ecological parameters, etc"
+2,Inputs,BiomIndx.txt,Inputs/BiomIndx.txt,Biomass in tonnes of each species
+3,Inputs,Fisheries.csv,Inputs/Fisheries.csv,"Fisheries name, recreation info, etc"
+4,Inputs,Functional_groups.csv,Inputs/Functional_groups.csv,"Biological, fishing, and management info"
+5,Inputs,Geography.bgm,Inputs/Geography.bgm,Geometry of boxes 
+6,Inputs,Initial_condition.nc,Inputs/Initial_condition.nc,Initial biomass and age structure 
+7,Inputs,outputs.nc,Inputs/outputs.nc,3D snapshots of the tracer values
+8,Inputs,outputsCATCH.nc,Inputs/outputsCATCH.nc,Landing per species per fishery 
+9,Inputs,outputsCatch.txt,Inputs/outputsCatch.txt,Landing per species over all fisheries
+10,Inputs,outputsCatchPerFishery.txt,Inputs/outputsCatchPerFishery.txt,Landing per species per fishery
+11,Inputs,outputsDietCheck.txt,Inputs/outputsDietCheck.txt,Indication of diet pressure
+12,Inputs,outputsPROD.nc,Inputs/outputsPROD.nc,2D snapshorts of diagnostic tracers
+13,Inputs,outputsYOY.txt,Inputs/outputsYOY.txt,Biomass of recruits at spawning time
+14,Inputs,Run_settings.xml,Inputs/Run_settings.xml,"Time setp, run and stop time, etc"

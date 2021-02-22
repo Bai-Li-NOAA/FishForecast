@@ -1,0 +1,177 @@
+---
+title: "A Review of Inputs and Outputs of Fisheries Tools"
+date: "`r format(Sys.time(), '%m/%d/%Y')`"
+output:
+  # pdf_document: default
+  html_document: default
+---
+
+```{css, echo=FALSE}
+.color-inputs {
+  background-color: lightblue;
+  border: 2px solid gray;
+  font-weight: bold;
+}
+
+.color-outputs {
+  background-color: mistyrose;
+  border: 2px solid gray;
+  font-weight: bold;
+}
+```
+
+## 1. Ecology and fisheries simulators 
+
+### 1.1 Atlantis  
+
+* Use Atlantis as an example. For more details on using Atlantis see this [link](https://github.com/Atlantis-Ecosystem-Model). 
+
+* Atlantis model structure  
+    + Geometry submodel
+        - Description of model box shapes
+    + Physics submodel
+        - Physical processes parameters
+        - Initial concentrations and distributions of model variables
+        - Hydrodynamic forcing of the transport model
+        - Environmental drivers such as temperature, salinity, nutient inputs, river flows, and contaminants
+    + Biology submodel
+        - Initial concentrations and distributions of model variables
+        - List of functional groups and their key biological characteristics
+        - Biological interaction parameters
+        - Biological drivers such as recruitment, extra mortality, and dispersal
+    + Harvest submodel
+        - List of fisheries and their key characteristics
+        - Human impacts parameters
+        - Catches and discards
+    + Economics submodel
+        - Socio-economic interaction parameters
+        - prices
+        
+\newpage
+
+*  The structure of input files (* means essential files )
+
+```{r, echo=FALSE, class.output=".color-inputs"}
+library(data.tree)
+library(plyr)
+
+main.dir <- getwd()
+
+path_table <- read.csv(file.path(main.dir, "AtlantisInputs.csv"))
+path_table <- as.Node(path_table)
+
+print(path_table, "description")
+```
+        
+\newpage
+
+*  The structure of output files
+
+```{r, echo=FALSE, class.output=".color-outputs"}
+path_table <- read.csv(file.path(main.dir, "AtlantisOutputs.csv"))
+path_table <- as.Node(path_table)
+print(path_table, "description")
+```
+        
+\newpage
+
+## 2. Stock assessment operating tools  
+
+### 2.1 Atlantisom
+
+* Use Atlantisom as an example. For more details on using Atlantisom see this [link](https://sgaichas.github.io/poseidon-dev/atlantisom_landingpage.html).  
+
+* Atlantisom model structure
+    + Import simulated truth form Atlantis
+        - Get biomass, abundance, age composition, length composition, weight-at-age for each species
+        - Get fishery catch, catch-at-age, fishery length composition, and fishery weight-at-age for each species
+    + Specify uncertainty in observed data
+        - Survey specifications (e.g., timing and spatial coverage) and uncertainty (e.g., observation error and effective sample size)
+        - Fishery specifications (e.g., sampling areas) and uncertainty (e.g., observation error and effective sample size)  
+    + Get other life history parameters from Atlantis Biology.prm file
+        - Use weight-length relationship parameters from Atlantis to calculate h, R0
+        - Use natural mortality from Atlantis
+        - Use survey length-at-age from Atlantis to estimate growth curve
+        
+    + Format data to run stock assessment models  
+
+*  The structure of input files (use ANNAGEBIO.nc and ANNAGECATCH.nc if available)
+
+```{r, echo=FALSE, class.output=".color-inputs"}
+path_table <- read.csv(file.path(main.dir, "AtlantisomInputs.csv"))
+path_table <- as.Node(path_table)
+print(path_table, "description")
+```
+
+\newpage
+
+*  The structure of output files 
+```{r, echo=FALSE, class.output=".color-outputs"}
+path_table <- read.csv(file.path(main.dir, "Atlantisomoutputs.csv"))
+path_table <- as.Node(path_table)
+print(path_table, "description")
+```
+
+\newpage
+
+## 3. Stock assessment tools  
+
+### 3.1 Stock Synthesis (SS)
+
+* Use SS as an single-species assessment example. For more details on using SS see this [link](https://vlab.ncep.noaa.gov/web/stock-synthesis).  
+
+* SS structure
+
+### 3.2 Globally applicable Area Disaggregated General Ecosystem Toolbox (Gadget)
+
+* Use Gadget as an multi-species assessment example. For more details on using Gadget see these links:  
+    + [gadget2](https://github.com/gadget-framework/gadget2)
+    + [rgadget](https://github.com/gadget-framework/rgadget)
+    + [gadget courses](https://heima.hafro.is/~bthe/gadget_course.html)
+    
+* Gadget structure
+    + Specify model years, time steps, areas, temperature of areas
+    + Provide information of stocks 
+        - Biological information such as minage and minlength
+        - Key components such as growth model, natural mortality for each age group, predator-prey determination, initial condition, migration, maturity, movement, renew, spawn, and stray information
+        - Predation is modelled in terms of size and it includes consumption and cannibalistic relationships
+        - Recruitment can be modeled as result of spawning and independent renewal
+    + Add human interactions as removals of stock
+        - Provide fleet type,selectivity, and catch data
+
+*  The structure of input files 
+
+```{r, echo=FALSE, class.output=".color-inputs"}
+path_table <- read.csv(file.path(main.dir, "GadgetInputs.csv"))
+path_table <- as.Node(path_table)
+print(path_table, "description")
+```
+
+\newpage
+
+*  The structure of output files 
+
+```{r, echo=FALSE, class.output=".color-outputs"}
+path_table <- read.csv(file.path(main.dir, "GadgetOutputs.csv"))
+path_table <- as.Node(path_table)
+print(path_table, "description")
+```
+
+\newpage
+## 4. Forecasting tools 
+
+* Required inputs and forecasting outputs of potential tools  
+    + Gadget projections
+        - Need to set up stock biological parameterizations
+        - Need to keep original parameter settings or: adding a recruitment series; modifying reference points used to control fishin behavior, modifying harvest levels and errors
+        - Can produce projections of immature and mature portinos of stocks and projections of each species in multispecies model
+        - Can project fleet and its response to a harvest control rule/modifications of fishing behavior (e.g., inputs or outputs regulation, split effort/quota among fleets)
+        - Can produce yield and spawning stock biomass over F 
+        - Can produce biomass, abundance, and catch over years under different harvest rates
+
+
+* Capabilities of incorporating climate, ecosystem, and economic considerations
+
+* Scenarios to explore and comparison criteria
+
+## 5. Diagnostic tools
