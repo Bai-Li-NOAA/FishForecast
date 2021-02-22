@@ -1,0 +1,43 @@
+,"rep(""Outputs"", times = nrow(path_table))",V1,pathString,description,details
+1,Outputs,Biology.xml,Outputs/Biology.xml,Readable converted input file,
+2,Outputs,BiomIndx.txt,Outputs/BiomIndx.txt,Biomass in tonnes of each species,
+3,Outputs,delete_to_halt_run,Outputs/delete_to_halt_run,Write outputs to date ,
+4,Outputs,export.ts,Outputs/export.ts,Net mass changes,
+5,Outputs,Fisheries.xml,Outputs/Fisheries.xml,Readable converted input file,
+6,Outputs,Functional_groups.xml,Outputs/Functional_groups.xml,Readable converted input file,
+7,Outputs,Geography.bgm,Outputs/Geography.bgm,Box model geometry,
+8,Outputs,Harvest.xml,Outputs/Harvest.xml,Readable converted input file,
+9,Outputs,implementation.xml,Outputs/implementation.xml,Readable converted input file,
+10,Outputs,inputs.ts,Outputs/inputs.ts,Total tracer inputs,
+11,Outputs,log.txt,Outputs/log.txt,Messages generated during the run,
+12,Outputs,outputs.nc,Outputs/outputs.nc,3D snapshots of the tracer values,
+13,Outputs,outputs_BrokenStick.txt,Outputs/outputs_BrokenStick.txt,Broken stick harvest strategy indices,
+14,Outputs,outputs_management.xml,Outputs/outputs_management.xml,Readable converted input file,
+15,Outputs,outputsAgeBiomIndx.txt,Outputs/outputsAgeBiomIndx.txt,Biomass of all species per age group,Active species
+16,Outputs,outputsAnnualAgeBiomIndx.txt,Outputs/outputsAnnualAgeBiomIndx.txt,Annual biomass index per age,All active species
+17,Outputs,outputsBiomIndx.txt,Outputs/outputsBiomIndx.txt,Biomasses of all active species,
+18,Outputs,outputsBiomReg.txt,Outputs/outputsBiomReg.txt,Similar to BiomIndx outputs?,
+19,Outputs,outputsBoxBiomass.txt,Outputs/outputsBoxBiomass.txt,Biomass of all species per box,All active species
+20,Outputs,outputsCATCH.nc,Outputs/outputsCATCH.nc,Landing per species per fishery ,Per age class
+21,Outputs,outputsCatch.txt,Outputs/outputsCatch.txt,Landing per species over all fisheries,
+22,Outputs,outputsCatchPerFishery.txt,Outputs/outputsCatchPerFishery.txt,Landing per species per fishery,
+23,Outputs,outputsDietCheck.txt,Outputs/outputsDietCheck.txt,Indication of diet pressure,
+24,Outputs,outputsDiscard.txt,Outputs/outputsDiscard.txt,Discards per species over all fisheries,
+25,Outputs,outputsDiscardPerFishery.txt,Outputs/outputsDiscardPerFishery.txt,Discards per species per fishery,
+26,Outputs,outputsEffort.txt,Outputs/outputsEffort.txt,Number of days per fishery for fishing,
+27,Outputs,outputsHarvestIndx.txt,Outputs/outputsHarvestIndx.txt,Fisheries and management indices,"Fisheries and management indices, e.g. average size of catch, total landings, total discards, the number of changes in gear, bycatch of threatened or endangered species, habitat impacts, total effort expended, social acceptance, conflict between fisheries sectors, management access, management costs"
+28,Outputs,outputsMigration.txt,Outputs/outputsMigration.txt,Migrating biomass per adults & juveniles,
+29,Outputs,outputsMort.txt,Outputs/outputsMort.txt,Natural and fishing mortality per species,Annual mortality
+30,Outputs,outputsMortPerPred.txt,Outputs/outputsMortPerPred.txt,Mortality of species by each predator?,Each age group as well
+31,Outputs,outputsPredPropCheck.txt,Outputs/outputsPredPropCheck.txt,Indication of predation?,
+32,Outputs,outputsPROD.nc,Outputs/outputsPROD.nc,2D snapshorts of diagnostic tracers,"Production and grazing for biomass groups, growth and consumption for each age group for each fully age structured group, and a number of other diagnostic indices"
+33,Outputs,outputsRecCatch.txt,Outputs/outputsRecCatch.txt,Recreational catch per species,
+34,Outputs,outputsSpecificMort.txt,Outputs/outputsSpecificMort.txt,3 values of instantaneous mortality,"For each functional group, age group and stock. M2 is predation mortality, M1 other natural mortality (starvation, linear mortality), F is fishing mortality"
+35,Outputs,outputsSpecificPredMort.txt,Outputs/outputsSpecificPredMort.txt,Mortality of species by each predator ,Annual mortality
+36,Outputs,outputsSSB.txt,Outputs/outputsSSB.txt,Mature biomass at spawning time,
+37,Outputs,outputsTAC.txt,Outputs/outputsTAC.txt,TAC per species per year,
+38,Outputs,outputsTOT.nc,Outputs/outputsTOT.nc,2D snapshorts of tracers per box,
+39,Outputs,outputsTOTCATCH.nc,Outputs/outputsTOTCATCH.nc,Total catch per species in tonnes,Catch and discard
+40,Outputs,outputsVertSize.txt,Outputs/outputsVertSize.txt,Sizes of migrating age structured group,"Numbers, average sizes and biomass of each migrating age structured group in the model domain at the time of the output"
+41,Outputs,outputsYOY.txt,Outputs/outputsYOY.txt,Biomass of recruits at spawning time,Annual biomass
+42,Outputs,Run_settings.xml,Outputs/Run_settings.xml,Readable converted input file,

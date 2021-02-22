@@ -1,0 +1,20 @@
+,"rep(""Inputs"", times = nrow(path_table))",V1,V2,pathString
+1,Inputs,Aggfiles,lingimm.stock.len.agg,Inputs/Aggfiles/lingimm.stock.len.agg
+2,Inputs,Aggfiles,lingmat.stock.len.agg,Inputs/Aggfiles/lingmat.stock.len.agg
+3,Inputs,Data,fleet.bmt.data,Inputs/Data/fleet.bmt.data
+4,Inputs,Data,fleet.foreign.data,Inputs/Data/fleet.foreign.data
+5,Inputs,Data,fleet.gil.data,Inputs/Data/fleet.gil.data
+6,Inputs,Data,fleet.lln.data,Inputs/Data/fleet.lln.data
+7,Inputs,Data,fleet.surv.data,Inputs/Data/fleet.surv.data
+8,Inputs,lingimm,NA,Inputs/lingimm
+9,Inputs,lingmat,NA,Inputs/lingmat
+10,Inputs,main,NA,Inputs/main
+11,Inputs,Modelfiles,area,Inputs/Modelfiles/area
+12,Inputs,Modelfiles,fleet,Inputs/Modelfiles/fleet
+13,Inputs,Modelfiles,lingimm.init.normalparam,Inputs/Modelfiles/lingimm.init.normalparam
+14,Inputs,Modelfiles,lingimm.maturity,Inputs/Modelfiles/lingimm.maturity
+15,Inputs,Modelfiles,lingimm.refwgt,Inputs/Modelfiles/lingimm.refwgt
+16,Inputs,Modelfiles,lingmat.init.normalparam,Inputs/Modelfiles/lingmat.init.normalparam
+17,Inputs,Modelfiles,lingmat.refwgt,Inputs/Modelfiles/lingmat.refwgt
+18,Inputs,Modelfiles,time,Inputs/Modelfiles/time
+19,Inputs,params.forsim,NA,Inputs/params.forsim
